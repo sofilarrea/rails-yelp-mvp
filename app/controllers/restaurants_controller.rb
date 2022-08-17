@@ -8,13 +8,13 @@ class RestaurantsController < ApplicationController
   def new
     @restaurant = Restaurant.new
   end
-  
+
   def show
     @review = Review.new
   end
 
   def create
-    @restaurant = Restaurtan.new(restaurant_params)
+    @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
       redirect_to @restaurant, notice: "Retaurant was successfully created"
     else
